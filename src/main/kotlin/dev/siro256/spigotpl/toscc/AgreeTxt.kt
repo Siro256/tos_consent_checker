@@ -19,8 +19,8 @@ class AgreeTxt {
     }
 
     fun addList(uuid: String) {
-        val output = BufferedWriter(FileWriter(File("${ToSCC.instance.dataFolder}/agree.txt")))
         output.append(uuid)
+        val output = BufferedWriter(FileWriter(File("${ToSCC.instance.dataFolder}/agree.txt"), true))
         output.close()
 
         return

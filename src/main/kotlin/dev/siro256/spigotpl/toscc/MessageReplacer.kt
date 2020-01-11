@@ -55,11 +55,6 @@ class MessageReplacer {
             }
         }
 
-        while (message.contains("\n")) {
-
-        }
-
-
         message += "$RESET \n${YELLOW}同意する場合は「同意する」を、同意しない場合は「同意しない」をクリックしてください。${RESET} \n "
 
         return message

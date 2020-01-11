@@ -1,0 +1,12 @@
+### 表示するメッセージ ###
+#
+# \{$XXXX}: 装飾 名前はSpigotのChatColorに準拠　https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html
+#
+# 注: ${} を装飾コードではなくて文字として入力したい場合は、$の前にバックスラッシュを置いてください
+#     バックスラッシュが抜けている場合、 [PLUGIN_MESSAGE: INVALID_BRACES] と表示されます
+
+message: |
+  ${AQUA}参加していただきありがとうございます。
+  ${AQUA}当サーバーは、初参加の際に利用規約に同意していただいております。
+  ${AQUA}利用規約はこちらのページでご確認ください。
+  ${GOLD}${UNDERLINE}https://www.example.com/terms_of_service

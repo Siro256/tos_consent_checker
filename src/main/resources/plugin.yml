@@ -1,0 +1,17 @@
+name: ToSCC
+version: 1.0.0
+main: dev.siro256.spigotpl.toscc.ToSCC
+description: 規約に同意したか確認するプラグイン
+author: Siro_256
+prefix: ToSCC
+commands:
+  agree:
+    description: 内部処理に使用するコマンド
+    permission: default-permission
+  disagree:
+    description: 内部処理に使用するコマンド
+    permission: default-permission
+
+permissions:
+  default-permission:
+    default: true

@@ -44,7 +44,7 @@ class ToSCC : JavaPlugin() {
     companion object {
         lateinit var instance: ToSCC
         lateinit var message: String
-        lateinit var agree: ArrayList<String>
+        lateinit var agree: MutableList<String>
         val checking = mutableListOf<String>()
         val moveMessageSent = mutableListOf<String>()
         val chatMessageSent = mutableListOf<String>()

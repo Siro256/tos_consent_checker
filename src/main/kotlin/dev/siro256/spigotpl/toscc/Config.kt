@@ -9,7 +9,7 @@ class Config internal constructor(private val plugin: ToSCC) {
     }
 
     fun loadConfig() {
-        Companion.config = plugin.config
+        config = plugin.config
         return
     }
 

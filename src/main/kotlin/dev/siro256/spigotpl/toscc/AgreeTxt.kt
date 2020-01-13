@@ -12,7 +12,9 @@ class AgreeTxt {
         val scanner = Scanner(File("${ToSCC.instance.dataFolder}/agree.txt"))
         val list = ArrayList<String>()
 
-        while (scanner.hasNext()) { list.add(scanner.next()) }
+        while (scanner.hasNext()) {
+            list.add(scanner.next())
+        }
         scanner.close()
 
         return list

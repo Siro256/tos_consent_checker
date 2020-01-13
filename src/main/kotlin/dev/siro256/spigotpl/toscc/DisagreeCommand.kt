@@ -5,17 +5,26 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-object DisagreeCommand: CommandExecutor {
+object DisagreeCommand : CommandExecutor {
 
-    override fun onCommand(sender: CommandSender, command: Command?, label: String?, args: Array<out String>?): Boolean {
-        val sender = sender as Player
+    override fun onCommand(
+        sender: CommandSender,
+        command: Command?,
+        label: String?,
+        args: Array<out String>?
+    ): Boolean {
+        val player = sender as? Player ?: return true
+        val uuid = player.uniqueId
 
-        if (!ToSCC.checking.contains(sender.uniqueId.toString())) return true
+        if (uuid.toString() !in ToSCC.checking) return true
 
-        ToSCC.checking.remove(sender.uniqueId.toString())
-        ToSCC.moveMessageSent.remove(sender.uniqueId.toString())
-        ToSCC.chatMessageSent.remove(sender.uniqueId.toString())
-        sender.kickPlayer("利用規約に同意しなかったため、サーバーからキックされました。")
+        uuid.toString().also { uuidText ->
+            ToSCC.checking -= uuidText
+            ToSCC.moveMessageSent -= uuidText
+            ToSCC.chatMessageSent -= uuidText
+        }
+
+        player.kickPlayer("利用規約に同意しなかったため、サーバーからキックされました。")
 
         return true
     }

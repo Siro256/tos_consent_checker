@@ -1,12 +1,13 @@
 package dev.siro256.spigotpl.toscc
 
-import org.bukkit.ChatColor.*
+import org.bukkit.ChatColor.GREEN
+import org.bukkit.ChatColor.RED
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.Paths
 
-class ToSCC: JavaPlugin() {
+class ToSCC : JavaPlugin() {
 
     init {
         instance = this
@@ -44,8 +45,8 @@ class ToSCC: JavaPlugin() {
         lateinit var instance: ToSCC
         lateinit var message: String
         lateinit var agree: ArrayList<String>
-        val checking =  ArrayList<String>()
-        val moveMessageSent = ArrayList<String>()
-        val chatMessageSent = ArrayList<String>()
+        val checking = mutableListOf<String>()
+        val moveMessageSent = mutableListOf<String>()
+        val chatMessageSent = mutableListOf<String>()
     }
 }
